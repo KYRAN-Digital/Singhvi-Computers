@@ -1,1 +1,89 @@
+:root {
+  --primary: #0097b2;
+  --primary-light: #7dc9d8;
+  --bg: #f6f6f6;
+  --text: #0f172a;
+}
 
+body {
+  margin: 0;
+  font-family: "Sora", sans-serif;
+  color: var(--text);
+
+  background:
+    radial-gradient(circle at 10% 10%, rgba(0,151,178,0.18), transparent 30%),
+    radial-gradient(circle at 90% 20%, rgba(125,201,216,0.25), transparent 30%),
+    linear-gradient(160deg, #f6f6f6 0%, #eef6f8 45%, #f6f6f6 100%);
+}
+
+/* subtle pattern */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: -1;
+
+  background:
+    repeating-linear-gradient(
+      90deg,
+      transparent 0,
+      transparent 28px,
+      rgba(0,151,178,0.05) 28px,
+      rgba(0,151,178,0.05) 29px
+    );
+}
+
+.page-frame {
+  padding: 20px;
+}
+
+.profile-page {
+  max-width: 500px;
+  margin: auto;
+}
+
+/* HERO */
+.hero-card {
+  text-align: center;
+  padding: 40px 30px;
+  border-radius: 24px;
+
+  background: white;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.06);
+}
+
+.logo-shell img {
+  width: 220px;
+  border-radius: 12px;
+}
+
+/* FOOTER */
+.footer-banner {
+  margin-top: 20px;
+  padding: 18px;
+  text-align: center;
+
+  background: linear-gradient(140deg, #0097b2, #007a91);
+  color: rgba(255,255,255,0.9);
+
+  border-radius: 16px;
+}
+
+.footer-banner p {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.footer-banner .credit {
+  display: block;
+  margin-top: 6px;
+  font-size: 0.75rem;
+  opacity: 0.7;
+}
+
+.footer-banner strong {
+  color: #7dc9d8;
+  font-weight: 600;
+}
