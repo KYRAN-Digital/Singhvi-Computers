@@ -113,6 +113,12 @@ body::before {
   stroke-width: 2;
 }
 
+/* WhatsApp FIX */
+.whatsapp-icon svg {
+  stroke: none;
+  fill: white;
+}
+
 /* button */
 .save-contact {
   margin-top: 20px;
