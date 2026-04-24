@@ -51,7 +51,9 @@ body::before {
 }
 
 .logo-shell img {
-  width: 200px;
+  width: 100%;
+  max-width: 280px;   /* control max size */
+  height: auto;
 }
 
 .hero-headline {
