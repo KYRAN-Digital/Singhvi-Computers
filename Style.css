@@ -58,13 +58,13 @@ body::before {
 
 .hero-headline {
   margin-top: 2px;
-  font-size: 12px;
+  font-size: 15px;
   font-weight: 700;
   color: var(--primary);
 }
 
 .brand-tagline {
-  font-size: 10px;
+  font-size: 12px;
   opacity: 0.9;
 }
 
