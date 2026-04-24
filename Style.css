@@ -52,19 +52,19 @@ body::before {
 
 .logo-shell img {
   width: 100%;
-  max-width: 280px;   /* control max size */
+  max-width: 350px;   /* control max size */
   height: auto;
 }
 
 .hero-headline {
-  margin-top: 10px;
-  font-size: 20px;
+  margin-top: 2px;
+  font-size: 12px;
   font-weight: 700;
   color: var(--primary);
 }
 
 .brand-tagline {
-  font-size: 14px;
+  font-size: 10px;
   opacity: 0.9;
 }
 
