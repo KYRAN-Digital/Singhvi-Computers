@@ -5,11 +5,6 @@
   --primary-light: #7dc9d8;
   --primary-glow: rgba(0, 151, 178, 0.1);
   
-  --blue: #0054a6; /* Brand blue for State Bank of India CSP */
-  --blue-hover: #003e7d;
-  --blue-light: #e8f0f8;
-  --blue-glow: rgba(0, 84, 166, 0.12);
-  
   --bg: #f3f7f8;
   --card-bg: rgba(255, 255, 255, 0.88);
   --card-border: rgba(255, 255, 255, 0.65);
@@ -22,9 +17,9 @@
   --shadow-md: 0 8px 24px rgba(0, 151, 178, 0.06);
   --shadow-lg: 0 16px 36px rgba(0, 151, 178, 0.1);
   
-  --radius-sm: 8px;
-  --radius-md: 14px;
-  --radius-lg: 20px;
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
   
   --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   --font: "Sora", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
@@ -47,8 +42,8 @@ body {
   position: relative;
   
   background:
-    radial-gradient(circle at 10% 15%, rgba(0, 84, 166, 0.08), transparent 45%),
-    radial-gradient(circle at 90% 10%, rgba(0, 151, 178, 0.12), transparent 45%),
+    radial-gradient(circle at 10% 15%, rgba(0, 151, 178, 0.12), transparent 40%),
+    radial-gradient(circle at 90% 10%, rgba(125, 201, 216, 0.15), transparent 40%),
     linear-gradient(165deg, #f3f7f8 0%, #e8f4f7 50%, #f3f7f8 100%);
 }
 
@@ -113,7 +108,11 @@ body::before {
 }
 
 .logo-shell {
-  margin-bottom: 14px;
+  background: transparent;
+  padding: 0;
+  box-shadow: none;
+  border: none;
+  margin-bottom: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -121,7 +120,7 @@ body::before {
 }
 
 .logo-shell img {
-  max-width: 260px; /* Increased size slightly */
+  max-width: 250px; /* Larger logo size */
   width: 100%;
   height: auto;
   display: block;
@@ -139,7 +138,7 @@ body::before {
   letter-spacing: 0.8px;
   padding: 5px 10px;
   border-radius: 50px;
-  margin-bottom: 14px;
+  margin-bottom: 12px;
   border: 1px solid rgba(0, 151, 178, 0.2);
 }
 
@@ -158,10 +157,10 @@ body::before {
 }
 
 .brand-tagline {
-  font-size: 13px;
+  font-size: 13.5px;
   color: var(--text-muted);
   line-height: 1.5;
-  max-width: 90%;
+  font-weight: 500;
 }
 
 /* Status Indicator */
@@ -206,11 +205,13 @@ body::before {
   background: #ef4444;
 }
 
-/* ================= CONNECT PANEL ================= */
+/* ================= CONNECT PANEL (TEAL MAIN, WHITE SECONDARY) ================= */
 .connect-panel {
+  background: linear-gradient(135deg, var(--primary) 0%, #007a91 100%);
   display: flex;
   flex-direction: column;
   gap: 10px;
+  box-shadow: var(--shadow-md);
 }
 
 .contact-card {
@@ -220,29 +221,30 @@ body::before {
   padding: 12px 14px;
   border-radius: var(--radius-md);
   text-decoration: none;
-  color: var(--text);
-  background: var(--white);
-  border: 1px solid rgba(0, 84, 166, 0.04);
-  box-shadow: var(--shadow-sm);
+  color: var(--white);
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: none;
   transition: var(--transition);
 }
 
 .contact-card:hover {
   transform: translateY(-2px);
-  border-color: var(--blue-light);
-  box-shadow: 0 4px 12px var(--blue-glow);
+  background: rgba(255, 255, 255, 0.16);
+  border-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
 }
 
 .contact-card strong {
   display: block;
   font-size: 13px;
-  color: var(--text-muted);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .contact-card p {
   font-size: 12px;
   font-weight: 600;
-  color: var(--text);
+  color: var(--white);
   word-break: break-all;
 }
 
@@ -254,14 +256,14 @@ body::before {
   justify-content: center;
   border-radius: 10px;
   flex-shrink: 0;
-  background: var(--blue-light); /* Changed to SBI Blue Light */
-  color: var(--blue); /* Changed to SBI Blue */
+  background: rgba(255, 255, 255, 0.12);
+  color: var(--white);
   transition: var(--transition);
 }
 
 .contact-card:hover .icon {
-  background: var(--blue);
-  color: var(--white);
+  background: var(--white);
+  color: var(--primary);
 }
 
 .icon svg {
@@ -290,12 +292,12 @@ body::before {
   width: 100%;
   padding: 12px;
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--blue) 0%, var(--primary) 100%); /* Blue brand gradient */
+  background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
   color: var(--white);
   font-weight: 600;
   font-size: 14px;
   text-decoration: none;
-  box-shadow: 0 4px 12px var(--blue-glow);
+  box-shadow: 0 4px 12px rgba(0, 151, 178, 0.2);
   transition: var(--transition);
   border: none;
   cursor: pointer;
@@ -303,8 +305,8 @@ body::before {
 
 .action-button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 16px rgba(0, 84, 166, 0.3);
-  background: linear-gradient(135deg, var(--blue-hover) 0%, var(--primary-hover) 100%);
+  box-shadow: 0 6px 16px rgba(0, 151, 178, 0.35);
+  background: linear-gradient(135deg, var(--primary-hover) 0%, var(--primary) 100%);
 }
 
 .action-button svg {
